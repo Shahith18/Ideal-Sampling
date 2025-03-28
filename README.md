@@ -4,14 +4,14 @@
 # Reg no : 212223060162
 
 
-Aim:
+## Aim:
 
 To simulate the process of sampling a continuous impulse signal and reconstructing it using the resampling method.
 To visualize the differences between the original impulse signal, the sampled version, and the reconstructed signal.
 
 
 
-Tools required:
+## Tools required:
 
 Programming Language: Python
 
@@ -23,8 +23,9 @@ Computer with Python installed or an online Python environment (e.g., Jupyter No
 
 
 
-Program:
+## Program:
 
+```
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -98,9 +99,10 @@ plt.grid(True)
 plt.legend()
 
 plt.show()
+```
 
 
-Output Waveform:
+## Output Waveform:
 
 
 ![continuos signal](https://github.com/user-attachments/assets/d2495de1-f581-4317-bc79-2d6eee80b4dc)
@@ -109,7 +111,7 @@ Output Waveform:
 
 
 
-Results:
+## Results:
 
 
 The original continuous impulse signal is displayed.
