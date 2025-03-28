@@ -6,7 +6,6 @@
 
 Aim:
 
-
 To simulate the process of sampling a continuous impulse signal and reconstructing it using the resampling method.
 To visualize the differences between the original impulse signal, the sampled version, and the reconstructed signal.
 
