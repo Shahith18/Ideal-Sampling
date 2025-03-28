@@ -23,15 +23,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import resample
 
-# Sampling frequency and time vector
 fs = 200
 t = np.arange(0, 1, 1/fs) 
 f = 8
 
-# Continuous signal
 signal = np.sin(2 * np.pi * f * t)
 
-# Plot continuous signal
 plt.figure(figsize=(10, 4))
 plt.plot(t, signal, label='Continuous Signal')
 plt.title('Continuous Signal (fs = 200 Hz)')  # Corrected title
@@ -41,29 +38,27 @@ plt.grid(True)
 plt.legend()
 plt.show()
 
-# Sampled signal
 t_sampled = np.arange(0, 1, 1/fs)
 signal_sampled = np.sin(2 * np.pi * f * t_sampled)
 
-# Plot sampled signal
+
 plt.figure(figsize=(10, 4))
 plt.plot(t, signal, label='Continuous Signal', alpha=0.7)
-plt.stem(t_sampled, signal_sampled, linefmt='r-', markerfmt='ro', basefmt='r-', label='Sampled Signal (fs = 200 Hz)')  # Corrected label
-plt.title('Sampling of Continuous Signal (fs = 200 Hz)')  # Corrected title
+plt.stem(t_sampled, signal_sampled, linefmt='r-', markerfmt='ro', basefmt='r-', label='Sampled Signal (fs = 200 Hz)')  
+plt.title('Sampling of Continuous Signal (fs = 200 Hz)')  
 plt.xlabel('Time [s]')
 plt.ylabel('Amplitude')
 plt.grid(True)
 plt.legend()
 plt.show()
 
-# Reconstructing the signal
+
 reconstructed_signal = resample(signal_sampled, len(t))
 
-# Plot reconstructed signal
 plt.figure(figsize=(10, 4))
 plt.plot(t, signal, label='Continuous Signal', alpha=0.7)
-plt.plot(t, reconstructed_signal, 'r--', label='Reconstructed Signal (fs = 200 Hz)')  # Corrected label
-plt.title('Reconstruction of Sampled Signal (fs = 200 Hz)')  # Corrected title
+plt.plot(t, reconstructed_signal, 'r--', label='Reconstructed Signal (fs = 200 Hz)') 
+plt.title('Reconstruction of Sampled Signal (fs = 200 Hz)') 
 plt.xlabel('Time [s]')
 plt.ylabel('Amplitude')
 plt.grid(True)
