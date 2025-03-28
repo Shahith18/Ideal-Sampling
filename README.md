@@ -100,7 +100,6 @@ plt.legend()
 plt.show()
 
 
-
 Output Waveform:
 
 
