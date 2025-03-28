@@ -43,7 +43,7 @@ plt.figure(figsize=(10, 4))
 
 plt.plot(t, signal, label='Continuous Signal')
 
-plt.title('Continuous Signal (fs = 200 Hz)')  # Corrected title
+plt.title('Continuous Signal (fs = 200 Hz)')  
 
 plt.xlabel('Time [s]')
 
